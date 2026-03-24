@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>予約システム改善提案書｜スタジオうえじ様向け</title>
+  <meta name="description" content="スタジオうえじ様向け 予約体験・決済・運用管理を一体化する予約システム改善提案書">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Noto+Serif+JP:wght@500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- ========== Side Navigation ========== -->
+  <nav class="side-nav" id="sideNav" aria-label="セクションナビゲーション">
+    <a href="#hero" class="side-nav__item is-active" data-section="hero">
+      <span class="side-nav__label">ファーストビュー</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-1" class="side-nav__item" data-section="section-1">
+      <span class="side-nav__label">はじめに</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-2" class="side-nav__item" data-section="section-2">
+      <span class="side-nav__label">課題整理</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-3" class="side-nav__item" data-section="section-3">
+      <span class="side-nav__label">進め方</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-4" class="side-nav__item" data-section="section-4">
+      <span class="side-nav__label">PoC</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-5" class="side-nav__item" data-section="section-5">
+      <span class="side-nav__label">本番版</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-6" class="side-nav__item" data-section="section-6">
+      <span class="side-nav__label">なぜ私に</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-7" class="side-nav__item" data-section="section-7">
+      <span class="side-nav__label">比較</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-8" class="side-nav__item" data-section="section-8">
+      <span class="side-nav__label">お見積り</span>
+      <span class="side-nav__dot"></span>
+    </a>
+    <a href="#section-9" class="side-nav__item" data-section="section-9">
+      <span class="side-nav__label">最後に</span>
+      <span class="side-nav__dot"></span>
+    </a>
+  </nav>
+
+  <!-- ========== Mobile Navigation ========== -->
+  <header class="mobile-nav" id="mobileNav">
+    <span class="mobile-nav__title">ご提案書</span>
+    <button class="mobile-nav__toggle" id="mobileToggle" aria-label="メニューを開く">☰</button>
+  </header>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#hero" class="mobile-menu__item" data-mobile-link>ファーストビュー</a>
+    <a href="#section-1" class="mobile-menu__item" data-mobile-link>1. はじめに</a>
+    <a href="#section-2" class="mobile-menu__item" data-mobile-link>2. 課題整理</a>
+    <a href="#section-3" class="mobile-menu__item" data-mobile-link>3. 進め方</a>
+    <a href="#section-4" class="mobile-menu__item" data-mobile-link>4. PoC</a>
+    <a href="#section-5" class="mobile-menu__item" data-mobile-link>5. 本番版</a>
+    <a href="#section-6" class="mobile-menu__item" data-mobile-link>6. なぜ私に</a>
+    <a href="#section-7" class="mobile-menu__item" data-mobile-link>7. 比較</a>
+    <a href="#section-8" class="mobile-menu__item" data-mobile-link>8. お見積り</a>
+    <a href="#section-9" class="mobile-menu__item" data-mobile-link>9. 最後に</a>
+  </div>
+
+  <!-- ========================================
+       セクション1：ファーストビュー
+       ======================================== -->
+  <section class="hero" id="hero">
+    <div class="hero__inner">
+      <span class="hero__badge">PROPOSAL</span>
+      <h1 class="hero__title">
+        予約体験・決済・運用管理を一体化する<br>予約システム改善提案
+      </h1>
+      <p class="hero__subtitle">スタジオうえじ様向け ご提案書</p>
+      <p class="hero__lead">
+        現在の予約導線は、ホームページで伝えているサービスの魅力や幅広い撮影メニューに対して、まだ改善余地が大きい状態だと考えています。<br>
+        本提案では、まず無償PoCで予約体験の完成イメージを具体化し、その上で本番版として、予約・決済・管理・売上把握まで一体化した仕組みを実現する道筋をご提案いたします。
+      </p>
+      <div class="hero__divider"></div>
+      <p class="hero__author">提案者：宇都 瑛祐</p>
+    </div>
+    <div class="hero__scroll">
+      <span>SCROLL</span>
+      <span class="hero__scroll-line"></span>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション2：1. はじめに：現状の理解
+       ======================================== -->
+  <section class="section" id="section-1">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 01</span>
+        <h2 class="section__title">1. はじめに：現状の理解</h2>
+        <p class="section__subtitle">
+          現在の予約導線を拝見すると、ホームページ上には豊富な撮影メニューや丁寧な価値訴求が掲載されている一方で、予約については
+          Googleフォーム中心の受付となっており、実際の予約体験がサービス内容に対して十分に追いついていない状態だと理解しています。
+        </p>
+        <p class="section__subtitle">
+          ホームページでは、七五三・お宮参り・卒園/卒業・入園/入学・マタニティ・ロケーション撮影など幅広い撮影領域が訴求されており、子ども向けだけでなく、大人向けの撮影や記念撮影も含めて、幅広い対応ができることが伝わります。<br>
+          一方で、現在の予約フォームは、拝見した限り、特定イベント向け・キッズ前提の申込構成に近く、事業全体の予約導線としては情報量・分岐等が不足しています。
+        </p>
+        <p class="section__subtitle">
+          現状の予約導線には、以下の特徴があります。
+        </p>
+        <ul class="section__subtitle" style="list-style: none; padding-left: 0; margin-bottom: 20px;">
+          <li style="padding-left: 20px; position: relative; margin-bottom: 6px;"><span
+              style="position: absolute; left: 0;">・</span>実際には幅広い撮影メニューがあるにも関わらず、予約時点で選べる内容が限定的</li>
+          <li style="padding-left: 20px; position: relative; margin-bottom: 6px;"><span
+              style="position: absolute; left: 0;">・</span>希望日時は第1希望・第2希望を入力する形式で、予約というより問い合わせに近い</li>
+          <li style="padding-left: 20px; position: relative; margin-bottom: 6px;"><span
+              style="position: absolute; left: 0;">・</span>決済への導線がない</li>
+          <li style="padding-left: 20px; position: relative; margin-bottom: 6px;"><span
+              style="position: absolute; left: 0;">・</span>初回/リピーターの判定がない</li>
+          <li style="padding-left: 20px; position: relative; margin-bottom: 6px;"><span
+              style="position: absolute; left: 0;">・</span>フォーム内容が子ども向け撮影前提で、大人向け撮影やその他メニューに対応していない</li>
+        </ul>
+        <p class="section__subtitle" style="margin-bottom: 48px;">
+          つまり、現在のやり方が悪いというより、事業の広がりに対して、予約導線がまだ追いついていない状態だと考えています。
+        </p>
+      </div>
+
+      <!-- Comparison Cards -->
+      <div class="comparison-grid fade-in">
+        <div class="comparison-card comparison-card--positive">
+          <h3 class="comparison-card__title">
+            <span class="comparison-card__icon">✦</span>
+            現在サイトで伝わっている魅力
+          </h3>
+          <ul class="comparison-card__list">
+            <li>幅広い撮影カテゴリ</li>
+            <li>丁寧なカウンセリング</li>
+            <li>安心感のあるサービス価値</li>
+            <li>ブランド体験としての魅力</li>
+          </ul>
+        </div>
+        <div class="comparison-card comparison-card--negative">
+          <h3 class="comparison-card__title">
+            <span class="comparison-card__icon">△</span>
+            現在の予約導線の実態
+          </h3>
+          <ul class="comparison-card__list">
+            <li>Googleフォーム中心</li>
+            <li>特定イベント寄りの構成</li>
+            <li>日程は問い合わせ型</li>
+            <li>決済導線なし</li>
+            <li>初回/リピーター判定なし</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション3：2. 課題整理
+       ======================================== -->
+  <section class="section section--alt" id="section-2">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 02</span>
+        <h2 class="section__title">2. 課題整理：いま何がボトルネックか</h2>
+        <p class="section__subtitle">
+          現状のボトルネックは、単に「GoogleFormである」「決済導線がない」という話ではなく、予約体験・運用負荷・売上機会の3つの観点にまたがっていると考えています。
+        </p>
+      </div>
+
+      <div class="issue-cards">
+        <!-- Issue 1 -->
+        <div class="issue-card issue-card--experience fade-in">
+          <span class="issue-card__number">BOTTLENECK 01</span>
+          <h3 class="issue-card__title">予約体験のボトルネック</h3>
+          <p class="issue-card__text">
+            ホームページでは幅広い撮影メニューが訴求されている一方で、予約時点ではそれを自然に選べる導線になっていません。<br>
+            また、現在は日程の第1希望・第2希望を送る問い合わせ型の流れであり、「予約」として完結する体験になっていません。
+          </p>
+          <ul class="issue-card__list">
+            <li>サービスの幅広さが予約導線に反映されていない</li>
+            <li>メニュー選択が限定的</li>
+            <li>日時予約が問い合わせ型</li>
+            <li>予約体験としての完成度が低い</li>
+          </ul>
+        </div>
+
+        <!-- Issue 2 -->
+        <div class="issue-card issue-card--operation fade-in">
+          <span class="issue-card__number">BOTTLENECK 02</span>
+          <h3 class="issue-card__title">運用面のボトルネック</h3>
+          <p class="issue-card__text">
+            フォーム回答をもとに日程調整や内容確認を行う構造では、件数が増えるほど手動対応が重くなります。<br>
+            また、初回かリピーターか、誰が何を予約しているかを効率的に整理しにくく、今後の拡大時に属人的になりやすい状態です。
+          </p>
+          <ul class="issue-card__list">
+            <li>手動の日程調整が発生しやすい</li>
+            <li>初回/リピーター判定ができない</li>
+            <li>予約情報の整理が煩雑</li>
+            <li>件数増加時に属人化しやすい</li>
+          </ul>
+        </div>
+
+        <!-- Issue 3 -->
+        <div class="issue-card issue-card--revenue fade-in">
+          <span class="issue-card__number">BOTTLENECK 03</span>
+          <h3 class="issue-card__title">売上機会のボトルネック</h3>
+          <p class="issue-card__text">
+            決済導線がないため、予約から確定までが分断されやすく、予約確定率や運用効率の面で損失が出やすい状態です。<br>
+            さらに、売上管理や担当カメラマン別の実績管理にもつながりにくく、経営判断に使えるデータが溜まりにくい構造になっています。
+          </p>
+          <ul class="issue-card__list">
+            <li>カード決済導線がない</li>
+            <li>予約確定までが分断される</li>
+            <li>売上管理と予約管理が分かれる</li>
+            <li>カメラマン別実績管理に発展しにくい</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション4：3. 今回の進め方
+       ======================================== -->
+  <section class="section" id="section-3">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 03</span>
+        <h2 class="section__title">3. 今回の進め方：まずは無償PoCでイメージを具体化</h2>
+        <p class="section__subtitle">
+          今回は、正式な開発の前段階として、無償PoCを準備し、予約導線の完成イメージを具体化した状態でお持ちいたしました。
+        </p>
+        <p class="section__subtitle">そのため今回は、</p>
+        <ol class="section__subtitle" style="padding-left: 24px; margin-bottom: 8px;">
+          <li style="margin-bottom: 4px;">まずこちらでイメージを試作する</li>
+          <li style="margin-bottom: 4px;">その画面を見ながら方向性を揃える</li>
+          <li style="margin-bottom: 4px;">本番で必要な機能と優先順位を整理する</li>
+          <li style="margin-bottom: 4px;">本開発につなげる</li>
+        </ol>
+        <p class="section__subtitle">という流れで進めます。</p>
+      </div>
+
+      <!-- Steps Flow -->
+      <div class="steps-flow fade-in">
+        <div class="step-item step-item--active">
+          <div class="step-item__circle">
+            <span class="step-item__icon">🔍</span>
+          </div>
+          <span class="step-item__number">STEP 01</span>
+          <span class="step-item__label">現状把握</span>
+        </div>
+        <div class="step-item step-item--active">
+          <div class="step-item__circle">
+            <span class="step-item__icon">🛠</span>
+          </div>
+          <span class="step-item__number">STEP 02</span>
+          <span class="step-item__label">無償PoC提示</span>
+        </div>
+        <div class="step-item">
+          <div class="step-item__circle">
+            <span class="step-item__icon">📋</span>
+          </div>
+          <span class="step-item__number">STEP 03</span>
+          <span class="step-item__label">本番要件整理</span>
+        </div>
+        <div class="step-item">
+          <div class="step-item__circle">
+            <span class="step-item__icon">🚀</span>
+          </div>
+          <span class="step-item__number">STEP 04</span>
+          <span class="step-item__label">本開発</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション5：4. 今回お持ちしたPoCで見せるもの
+       ======================================== -->
+  <section class="section section--alt" id="section-4">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 04</span>
+        <h2 class="section__title">4. 今回お持ちしたPoCで見せるもの</h2>
+        <p class="section__subtitle">
+          今回のPoCでは、予約導線の中心部分に絞ってイメージを作成しています。<br>
+          ここで見せたいのは、単なる画面ではなく、「問い合わせ」ではなく「予約体験」として成立するかどうかです。<br>
+          また、予約画面だけでなく、管理画面サンプルも用意することで、予約者目線だけでなく運営側の見え方もイメージできるようにしています。
+        </p>
+      </div>
+
+      <div class="poc-section">
+        <!-- User Booking Flow -->
+        <div class="poc-group poc-group--user fade-in">
+          <h3 class="poc-group__title">
+            <span class="poc-group__icon">👤</span>
+            予約者向け
+          </h3>
+          <div class="poc-flow">
+            <div class="poc-flow__item">
+              <span class="poc-flow__step">メニュー選択</span>
+              <span class="poc-flow__arrow">→</span>
+            </div>
+            <div class="poc-flow__item">
+              <span class="poc-flow__step">日付選択</span>
+              <span class="poc-flow__arrow">→</span>
+            </div>
+            <div class="poc-flow__item">
+              <span class="poc-flow__step">時間選択</span>
+              <span class="poc-flow__arrow">→</span>
+            </div>
+            <div class="poc-flow__item">
+              <span class="poc-flow__step">お客様情報入力</span>
+              <span class="poc-flow__arrow">→</span>
+            </div>
+            <div class="poc-flow__item">
+              <span class="poc-flow__step">予約確認</span>
+              <span class="poc-flow__arrow">→</span>
+            </div>
+            <div class="poc-flow__item">
+              <span class="poc-flow__step">仮予約完了</span>
+            </div>
+          </div>
+        </div>
+        <!-- Admin Dashboard -->
+        <div class="poc-group poc-group--admin fade-in">
+          <h3 class="poc-group__title">
+            <span class="poc-group__icon">⚙</span>
+            管理画面
+          </h3>
+          <div class="poc-admin-items">
+            <span class="poc-admin-item">予約一覧</span>
+            <span class="poc-admin-item">予約詳細</span>
+            <span class="poc-admin-item">カレンダー / スケジュール確認</span>
+          </div>
+        </div>
+
+      </div>
+  </section>
+
+  <!-- ========================================
+       セクション6：5. 本番版で実現する世界観
+       ======================================== -->
+  <section class="section" id="section-5">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 05</span>
+        <h2 class="section__title">5. 本番版で実現する世界観</h2>
+        <p class="section__subtitle">
+          本番版で目指すのは、現在の「Googleフォームで受付し、その後に個別調整する導線」から、予約・決済・管理・売上把握までが一体でつながる予約基盤へ進化させることです。<br>
+          ブランド体験と予約体験、さらにその後の運用管理までを一貫した仕組みとして整えることを目指します。
+        </p>
+      </div>
+
+      <!-- Vision Grid -->
+      <div class="vision-grid fade-in">
+        <!-- User Side -->
+        <div class="vision-column vision-column--user">
+          <h3 class="vision-column__title">
+            <span>👤</span> ユーザー目線で実現すること
+          </h3>
+          <div class="vision-item">
+            <h4 class="vision-item__title">メニュー選択〜決済までを一連で完結</h4>
+            <p class="vision-item__desc">問い合わせ型ではなく、予約として完結する体験へ</p>
+          </div>
+          <div class="vision-item">
+            <h4 class="vision-item__title">予約完了までの往復を 1〜2回削減できる余地</h4>
+            <p class="vision-item__desc">日程調整・確認連絡の往復を減らしやすい</p>
+          </div>
+          <div class="vision-item">
+            <h4 class="vision-item__title">初回/リピーターで案内を最適化</h4>
+            <p class="vision-item__desc">初回には安心感を、再来店にはスムーズさを提供</p>
+          </div>
+          <div class="vision-item">
+            <h4 class="vision-item__title">入力負荷を一部 20〜40%程度削減できる余地</h4>
+            <p class="vision-item__desc">リピーター向け導線最適化や入力簡略化を想定</p>
+          </div>
+        </div>
+
+        <!-- Admin Side -->
+        <div class="vision-column vision-column--admin">
+          <h3 class="vision-column__title">
+            <span>⚙</span> 管理者目線で実現すること
+          </h3>
+          <div class="vision-item">
+            <h4 class="vision-item__title">予約一覧・詳細・カレンダーで一元把握</h4>
+            <p class="vision-item__desc">誰が・いつ・何を予約しているかを一目で確認</p>
+          </div>
+          <div class="vision-item">
+            <h4 class="vision-item__title">予約確認の初動を 数分 → 数十秒レベル に短縮余地</h4>
+            <p class="vision-item__desc">フォームや個別連絡ではなく管理画面起点で確認</p>
+          </div>
+          <div class="vision-item">
+            <h4 class="vision-item__title">仮予約 / 決済待ち / 確定 などを 4〜5段階で状態管理</h4>
+            <p class="vision-item__desc">確認漏れ・対応漏れを減らしやすい</p>
+          </div>
+          <div class="vision-item">
+            <h4 class="vision-item__title">予約確定と同時に売上データを紐づけ、売上管理を一体化</h4>
+            <p class="vision-item__desc">予約管理と売上管理を別で追わなくてよくなる</p>
+          </div>
+          <div class="vision-item">
+            <h4 class="vision-item__title">担当カメラマン別の売上・件数も可視化し、実績管理までつなげる</h4>
+            <p class="vision-item__desc">業務委託カメラマンが複数いる前提で、経営管理にも活用できる</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Vision Summary -->
+      <div class="vision-summary fade-in">
+        フォームで受付する仕組みから、<br>
+        予約・決済・売上・担当実績までつながる運用基盤へ進化させることを目指します。
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション7：6. なぜ私にご依頼いただくのがよいか
+       ======================================== -->
+  <section class="section section--alt" id="section-6">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 06</span>
+        <h2 class="section__title">6. なぜ私にご依頼いただくのがよいか</h2>
+        <p class="section__subtitle">
+          今回のご相談は、単に予約フォームを置き換える話ではなく、予約導線・決済導線・管理画面・売上把握・担当者実績管理まで含めて、全体を整理しながら形にしていく必要がある案件だと考えています。<br>
+          そのため、部分的な開発だけでなく、ユーザー体験から管理運用までを一貫して設計できることが重要です。
+        </p>
+      </div>
+
+      <div class="strength-cards">
+        <!-- Strength 1 -->
+        <div class="strength-card fade-in">
+          <span class="strength-card__number">01</span>
+          <h3 class="strength-card__title">フロント・サーバ・インフラを横断して設計・実装できる</h3>
+          <p class="strength-card__text">
+            一般的にエンジニアは、フロントエンド、サーバサイド、インフラなど、特定領域に専門性を持つことが多いです。<br>
+            一方で私は、シンプレクス・ホールディングス時代に、フロント・サーバ・インフラすべての運用に関わり、各領域で設計・実装経験があります。
+          </p>
+          <p class="strength-card__text">そのため、見た目の画面だけでなく、</p>
+          <ul class="strength-card__list">
+            <li>予約画面をどう見せるか</li>
+            <li>入力された情報をどう保持するか</li>
+            <li>決済をどうつなぐか</li>
+            <li>管理画面でどう見せるか</li>
+            <li>運用時にどう安定させるか</li>
+          </ul>
+          <p class="strength-card__text" style="margin-top: 16px; margin-bottom: 0;">
+            まで含めて、全体構成を踏まえて現実的に設計できます。
+          </p>
+        </div>
+
+        <!-- Strength 2 -->
+        <div class="strength-card fade-in">
+          <span class="strength-card__number">02</span>
+          <h3 class="strength-card__title">要望を整理し、導線として提案できる</h3>
+          <p class="strength-card__text">
+            今回のご要望は、メニュー選択、日時予約、決済、初回判定、売上管理、カメラマン別実績管理など複数あります。<br>
+            こうした案件は、要望をそのまま積み上げると広がりやすく、かえって進みにくくなることが多いです。
+          </p>
+          <p class="strength-card__text">今回は、現状の予約導線と運用の流れを見た上で、</p>
+          <ul class="strength-card__list">
+            <li>どこが予約体験のボトルネックか</li>
+            <li>どこが運用上の手間になっているか</li>
+            <li>どこが売上管理・担当実績管理に効くか</li>
+          </ul>
+          <p class="strength-card__text" style="margin-top: 16px; margin-bottom: 0;">
+            を整理し、まずは無償PoCとして予約導線と管理画面イメージを形にしています。
+          </p>
+        </div>
+
+        <!-- Strength 3 -->
+        <div class="strength-card fade-in">
+          <span class="strength-card__number">03</span>
+          <h3 class="strength-card__title">パッケージ導入より柔軟で、フルカスタマイズより現実的なコストで進められる</h3>
+          <p class="strength-card__text">
+            他社に依頼する場合、選択肢は大きく分けて、既存パッケージの導入か、フルカスタマイズ開発になります。<br>
+            既存パッケージは導入しやすい一方で、月額費用や決済手数料が継続的に発生し、業務や運用に合わせた柔軟な設計には限界があります。<br>
+            一方で、フルカスタマイズ開発は高額になりやすく、初期投資が重くなりがちです。
+          </p>
+          <p class="strength-card__text">今回のご提案は、その中間として、</p>
+          <ul class="strength-card__list">
+            <li>必要な予約導線</li>
+            <li>決済</li>
+            <li>管理</li>
+            <li>売上把握</li>
+            <li>実績管理</li>
+          </ul>
+          <p class="strength-card__text" style="margin-top: 16px; margin-bottom: 0;">
+            に絞って、実務に合う形で作ることで、コストと柔軟性のバランスを取りやすい形です。
+          </p>
+        </div>
+      </div>
+
+      <!-- Strength Summary -->
+      <div class="strength-summary fade-in">
+        <p class="strength-summary__text">つまり今回ご依頼いただく価値は、単に開発ができることではなく、</p>
+        <ul class="strength-summary__list">
+          <li>フロント・サーバ・インフラを横断して全体を設計できる</li>
+          <li>要望を整理し、優先順位をつけて進められる</li>
+          <li>口頭ではなくPoCとして具体化できる</li>
+          <li>パッケージ導入より柔軟で、フルカスタマイズより現実的なコストで進められる</li>
+        </ul>
+        <p class="strength-summary__text" style="margin-top: 16px; margin-bottom: 0;">点にあります。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション8：7. 他の選択肢との比較
+       ======================================== -->
+  <section class="section" id="section-7">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 07</span>
+        <h2 class="section__title">7. 他の選択肢との比較</h2>
+        <p class="section__subtitle">
+          今回のような予約システム改善を進める場合、選択肢は大きく3つあります。
+        </p>
+        <ol class="section__subtitle" style="padding-left: 24px; margin-bottom: 8px;">
+          <li style="margin-bottom: 4px;">既存パッケージ導入</li>
+          <li style="margin-bottom: 4px;">フルカスタマイズ開発</li>
+          <li style="margin-bottom: 4px;">今回のご提案</li>
+        </ol>
+        <p class="section__subtitle">
+          それぞれに特徴がありますが、今回のご相談内容を踏まえると、「必要な範囲に絞って現実的に始められ、かつ将来の拡張にもつなげやすい」ことが重要だと考えています。
+        </p>
+      </div>
+
+      <!-- Comparison Table -->
+      <div class="comparison-table-wrapper fade-in">
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>比較項目</th>
+              <th>既存パッケージ導入</th>
+              <th>フルカスタマイズ開発</th>
+              <th>今回のご提案</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>初期費用</td>
+              <td>低額</td>
+              <td>高額</td>
+              <td>中間</td>
+            </tr>
+            <tr>
+              <td>柔軟性</td>
+              <td>既存仕様に依存</td>
+              <td>高い</td>
+              <td>高い</td>
+            </tr>
+            <tr>
+              <td>自社運用フィット</td>
+              <td>合わない部分が出やすい</td>
+              <td>合わせやすい</td>
+              <td>合わせやすい</td>
+            </tr>
+            <tr>
+              <td>売上管理拡張</td>
+              <td>限定的</td>
+              <td>可能</td>
+              <td>可能</td>
+            </tr>
+            <tr>
+              <td>カメラマン別実績管理</td>
+              <td>限定的</td>
+              <td>可能</td>
+              <td>可能</td>
+            </tr>
+            <tr>
+              <td>スピード感</td>
+              <td>速い</td>
+              <td>比較的重い</td>
+              <td>速さと柔軟性のバランスが良い</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="comparison-note fade-in">
+        既存パッケージは導入しやすい一方で、月額費用や決済手数料が継続し、業務に合わせた柔軟な設計には限界があります。<br>
+        一方でフルカスタマイズは自由度が高い分、初期費用が重くなりやすいです。<br>
+        今回のご提案は、その中間として、必要な範囲に絞って現実的に始めつつ、将来的な拡張にもつなげやすい形を目指しています。
+      </p>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション9：8. 本番開発のお見積り
+       ======================================== -->
+  <section class="section section--alt" id="section-8">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 08</span>
+        <h2 class="section__title">8. 本番開発のお見積り</h2>
+        <p class="section__subtitle">
+          今回は、実際に進める判断がしやすいように、レンジではなく、この内容での確定見積としてご提示します。<br>
+          ただし前提として、今回整理した機能範囲ベースです。<br>
+          その場で軽微な調整であれば条件に反映できますが、機能追加や大きな変更がある場合は、一度持ち帰って正式に修正版をお出しする形で進めます。
+        </p>
+      </div>
+
+      <!-- Pricing Card -->
+      <div class="pricing-main fade-in">
+        <div class="pricing-card">
+          <p class="pricing-card__label">本番開発（スタンダード構成）</p>
+          <p class="pricing-card__price">980,000<small>円</small></p>
+          <p class="pricing-card__tax">（税込）</p>
+
+          <div class="pricing-features">
+            <h3 class="pricing-features__title">含む機能一覧</h3>
+            <h4 class="pricing-features__subtitle">予約者向け</h4>
+            <div class="pricing-features__grid">
+              <span class="pricing-features__item">メニュー選択</span>
+              <span class="pricing-features__item">日付選択</span>
+              <span class="pricing-features__item">時間選択</span>
+              <span class="pricing-features__item">お客様情報入力</span>
+              <span class="pricing-features__item">予約確認</span>
+              <span class="pricing-features__item">カード決済導線</span>
+              <span class="pricing-features__item">予約確定画面</span>
+            </div>
+            <h4 class="pricing-features__subtitle">管理画面</h4>
+            <div class="pricing-features__grid">
+              <span class="pricing-features__item">予約一覧</span>
+              <span class="pricing-features__item">予約詳細</span>
+              <span class="pricing-features__item">基本ステータス管理</span>
+              <span class="pricing-features__item">売上情報紐づけ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Option Table -->
+      <div class="option-table-wrapper fade-in">
+        <h3 class="option-table-title">オプション</h3>
+        <table class="option-table">
+          <thead>
+            <tr>
+              <th>オプション</th>
+              <th>内容</th>
+              <th>金額（税込）</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>カメラマン指名機能</td>
+              <td>カメラマンを指名して予約できる機能※カメラマン別売上 / 件数管理含む</td>
+              <td>400,000円</td>
+            </tr>
+            <tr>
+              <td>初回 / リピーター判定</td>
+              <td>初回かどうかに応じて導線や入力内容を分岐</td>
+              <td>100,000円</td>
+            </tr>
+            <tr>
+              <td>カメラマン別売上 / 件数管理</td>
+              <td>担当カメラマンごとの売上・担当件数を可視化</td>
+              <td>150,000円</td>
+            </tr>
+            <tr>
+              <td>カレンダー管理画面強化</td>
+              <td>日別・時間別に予約状況を確認できるカレンダー表示、空き枠・予約済み枠の可視化、日程調整しやすい管理画面を追加</td>
+              <td>100,000円</td>
+            </tr>
+            <tr>
+              <td>通知 / メール強化</td>
+              <td>予約受付・決済・確定等の通知導線強化</td>
+              <td>130,000円</td>
+            </tr>
+            <tr>
+              <td>権限管理</td>
+              <td>管理者・スタッフ・カメラマンなど、利用者ごとに閲覧・操作できる範囲を分ける機能を追加※金額はメール送信ケースの数により変動（40,000円/ケース目安）</td>
+              <td>120,000円</td>
+            </tr>
+            <tr>
+              <td>口コミ／レビュー機能</td>
+              <td>予約完了後に口コミ／レビューを投稿できる機能。投稿された口コミは管理画面で確認・承認後に公開される。</td>
+              <td>300,000円</td>
+            </tr>
+            <tr>
+              <td>クーポン・紹介割引機能</td>
+              <td>クーポンコードの発行、入力による割引、または紹介者・被紹介者双方に割引を適用する機能。</td>
+              <td>200,000円</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Notes -->
+      <div class="pricing-notes fade-in">
+        <h4 class="pricing-notes__title">備考</h4>
+        <ul class="pricing-notes__list">
+          <li>軽微修正2回まで含む</li>
+          <li>文言変更・表示調整などの軽微な調整は含む</li>
+          <li>新規画面追加、業務フロー変更、外部連携追加は別途見積</li>
+          <li>要件変更が発生した場合は、双方協議の上、金額・納期を見直す</li>
+          <li>納期は約4~6週間目処を想定。要件確定後、契約書にて正式なスケジュールを提示</li>
+          <li>リリース後1ヶ月は無償サポート、以降は月額12,000円~にて保守対応</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================
+       セクション10：9. 最後に
+       ======================================== -->
+  <section class="section closing" id="section-9">
+    <div class="container">
+      <div class="fade-in">
+        <span class="section__label">SECTION 09</span>
+        <h2 class="section__title" style="text-align: center;">9. 最後に</h2>
+        <p class="closing__text">
+          今回は、まず無償PoCという形で、予約導線と管理画面の完成イメージを具体化したうえでご提案しています。<br>
+          本番版では、予約・決済・管理・売上把握・担当実績管理まで一体でつながる仕組みを実装することで、単なるフォーム改善ではなく、今後の運用基盤づくりにつなげられると考えています。
+        </p>
+        <p class="closing__text">
+          まずは、本番でどこまでを優先範囲として進めるかを整理し、その上で開発に進めればと思っています。
+        </p>
+        <div class="closing__divider"></div>
+        <p class="closing__thanks">ご清覧ありがとうございました。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>© 2026 宇都 瑛祐</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
